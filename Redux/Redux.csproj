@@ -1,0 +1,65 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TypeScriptToolsVersion>2.6</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="%2a%2a\**" />
+    <Content Remove="%2a%2a\**" />
+    <EmbeddedResource Remove="%2a%2a\**" />
+    <None Remove="%2a%2a\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="angularApp\app\Components\Footer\footer.component.ts" />
+    <None Remove="angularApp\app\Components\Header\header.component.ts" />
+    <None Remove="angularApp\app\Components\TodoList\todoList.component.ts" />
+    <None Remove="angularApp\app\environments\environments.ts" />
+    <None Remove="angularApp\app\Models\ToDo.ts" />
+    <None Remove="angularApp\app\Modules\AppHttpModule.ts" />
+    <None Remove="angularApp\app\Services\toDoService.ts" />
+    <None Remove="angularApp\polyfills.ts" />
+    <None Remove="angularApp\Store\todoActions.ts" />
+    <None Remove="angularApp\Store\todoReducers.ts" />
+    <None Remove="angularApp\Store\todoStore.ts" />
+    <None Remove="angularApp\vendor.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\app.bundle.js" />
+    <None Include="wwwroot\js\polyfills.bundle.js" />
+  </ItemGroup>
+<!--
+  <ItemGroup>
+    <Content Include="tsconfig.json" />
+  </ItemGroup>
+-->
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+    <PackageReference Include="Microsoft.TypeScript.Compiler" Version="2.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="angularApp\app\Components\Footer\footer.component.ts" />
+    <TypeScriptCompile Include="angularApp\app\Components\Header\header.component.ts" />
+    <TypeScriptCompile Include="angularApp\app\Components\TodoList\todoList.component.ts" />
+    <TypeScriptCompile Include="angularApp\app\environments\environments.ts" />
+    <TypeScriptCompile Include="angularApp\app\Models\Todo.ts" />
+    <TypeScriptCompile Include="angularApp\app\Modules\appHttpModule.ts" />
+    <TypeScriptCompile Include="angularApp\app\Services\toDoService.ts" />
+    <TypeScriptCompile Include="angularApp\app\dbService.ts" />
+    <TypeScriptCompile Include="angularApp\Store\todoActions.ts" />
+    <TypeScriptCompile Include="angularApp\Store\todoReducers.ts" />
+    <TypeScriptCompile Include="angularApp\Store\todoStore.ts" />
+  </ItemGroup>
+<!--
+  <ItemGroup>
+    <TypeScriptCompile Include="angularApp\app\main.ts" />
+    <TypeScriptCompile Include="angularApp\polyfills.ts" />
+    <TypeScriptCompile Include="angularApp\vendor.ts" />
+  </ItemGroup>
+-->
+</Project>
